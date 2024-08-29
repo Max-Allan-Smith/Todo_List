@@ -15,7 +15,7 @@ This is a simple To-Do List API built using Express.js. The API allows you to cr
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/todo-list-api.git
+   git clone https://github.com/Max-Allan-Smith/Todo_List.git
    cd todo-list-api
    ```
 
