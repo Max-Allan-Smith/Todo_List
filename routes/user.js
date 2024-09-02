@@ -1,12 +1,23 @@
 // routes/user.js
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/user'); // Correct path to the controller
+const {
+  createUser,
+  loginUser,
+  getUser,
+  getById,
+  updateUser,
+  deleteUser,
+} = require('../controllers/user');
 
-router.post('/', userController.createUser);
-router.get('/', userController.getUser);
-router.get('/:id', userController.getById);
-router.put('/:id', userController.updateUser);
-router.delete('/:id', userController.deleteUser);
+// Public routes
+router.post('/', createUser);
+router.post('/login', loginUser);
+
+// Protected routes
+router.get('/', getUser);
+router.get('/:id', getById);
+router.put('/:id', updateUser);
+router.delete('/:id', deleteUser);
 
 module.exports = router;
